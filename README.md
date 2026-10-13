@@ -4,4 +4,4 @@ The Grateful Dead are well known for having long live setlists with a huge array
 
 The analysis arrived at a 49.2% chance that the next song in a setlist would be in the models top 5 predictions, some real predictive power for a model with over 400 songs that could come next.
 
-![alt text]([http://url/to/img.png](https://github.com/luke-galt/grateful-dead-exploratory-analysis/blob/a9982e87b95d0d9b48be8949f46c1172f3511b42/images/RelativeHeatmap.png?raw=true))
+![alt text](https://github.com/luke-galt/grateful-dead-exploratory-analysis/blob/a9982e87b95d0d9b48be8949f46c1172f3511b42/images/RelativeHeatmap.png?raw=true)
