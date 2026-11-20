@@ -40,4 +40,4 @@ All of the above I plan to implement some fixes for in later updates to the proj
 -Alpha is now selected via an 8-fold cross validation, using GroupKFold, on 80% of shows and scored on log-likelihood. Previously it was tuned on the same data that accruacy of the model was reported on. The final metrics were tested on the 20% of shows that were initially left out. The original method to pick alpha by trial and error has been left in the notebook, however the more refined cross validation method is 
 
 **v1 (October 2026)**
--Alpha was selected via trial and error over a possible set of alphas. 
+-Alpha was selected via trial and error over a possible set of alphas, picked using the log-likelihood. Alpha is the value used in the Laplace smoothing for the markov-model, validated on a single 80\20 split.
