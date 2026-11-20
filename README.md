@@ -34,7 +34,7 @@ Era comparison was only completed to explain song popularity but could be used t
 
 All of the above I plan to implement some fixes for in later updates to the project.
 
-##Changelog
+## Changelog
 
 **v2 (November 2026)**
 -Alpha is now selected via an 8-fold cross validation, using GroupKFold, on 80% of shows and scored on log-likelihood. Previously it was tuned on the same data that accruacy of the model was reported on. The final metrics were tested on the 20% of shows that were initially left out. The original method to pick alpha by trial and error has been left in the notebook, however the more refined cross validation method is 
