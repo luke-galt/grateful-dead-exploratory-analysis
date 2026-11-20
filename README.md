@@ -18,7 +18,7 @@ Once the data was cleaned, I transported the data into SQL where I ran several q
 
 Following this, I moved to the main mathematical aspect of the project, fitting a Markov chain model to the data to see if we could meaningfully predict what song would come next in a setlist. To do this I built a transition matrix using our data, incorporating Laplace Smoothing to represent the fact that just because a transition never occurred didn't mean it was impossible to happen.
 
-To test if the stationary distribution we obtained from this has any actual predictive power, I rebuilt the transition matrix with 20% of the setlists removed and then tested the model on the unseen data to see how well it does at predicting what actually came next. The model had a hit rate of 49.2% for songs in its predicted top 5 compared to just a 14.6% hitrate assuming the next song would always be in the top 5 most played. 
+To test if the stationary distribution we obtained from this has any actual predictive power, I rebuilt the transition matrix with 20% of the setlists removed and then tested the model on the unseen data to see how well it does at predicting what actually came next. The model had a hit rate of 49.3% for songs in its predicted top 5 compared to just a 15.2% hitrate assuming the next song would always be in the top 5 most played, and 1.2% if we were to guess 5 songs at random each time.
 
 ## Key Findings
 
@@ -28,12 +28,16 @@ The model also predicts better than a guess just based on popularity, with the m
 
 ## Limitations
 
-The smoothing parameter alpha was tuned on the test dataset, by choosing based on the log-likelihood on the same dataset that was used to test the accuracy. A separate validation split of the data would fix this issue, although the effect is likely to be small as the likelihood stays pretty flat for other close values of alpha. 
-
 The model is first order dependent only, with no reference to potential effects of previous songs in the setlist. With 421 songs, the amount of song pairs are small so getting reliable data would be tough. 
-
-The model was only validated on one random split, rather than completing full cross-validation.
 
 Era comparison was only completed to explain song popularity but could be used to see if transition behaviour changed over eras too.
 
 All of the above I plan to implement some fixes for in later updates to the project.
+
+##Changelog
+
+**v2 (November 2026)**
+-Alpha is now selected via an 8-fold cross validation, using GroupKFold, on 80% of shows and scored on log-likelihood. Previously it was tuned on the same data that accruacy of the model was reported on. The final metrics were tested on the 20% of shows that were initially left out. The original method to pick alpha by trial and error has been left in the notebook, however the more refined cross validation method is 
+
+**v1 (October 2026)**
+-Alpha was selected via trial and error over a possible set of alphas. 
