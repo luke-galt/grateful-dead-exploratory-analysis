@@ -24,7 +24,7 @@ To test if the stationary distribution we obtained from this has any actual pred
 
 Some songs have clear eras, such as Casey Jones being heavily concentrated early and falling off quickly, or Bird Song which started as a rarity before becoming more of a concert staple as time went on. Turn On Your Lovelight was very popular early on before falling off sharply and having a small renaissance in later eras. Some songs stayed in rotation throughout the bands whole career, such as Sugar Magnolia and The Other One. 
 
-The model also predicts better than a guess just based on popularity, with the model predicting that the next song will be in the model's top 5 with 49.2% accuracy, significantly above the 14.6% accuracy we'd expect with just guessing the top 5 most popular songs each time. Complete chance would be only 1.2% (5 out of 421 songs).
+The model also predicts better than a guess just based on popularity, with the model predicting that the next song will be in the model's top 5 with 49.3% accuracy, significantly above the 15.2% accuracy we'd expect with just guessing the top 5 most popular songs each time. Complete chance would be only 1.2% (5 out of 421 songs).
 
 ## Limitations
 
